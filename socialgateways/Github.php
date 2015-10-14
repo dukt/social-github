@@ -60,4 +60,39 @@ class Github extends BaseGateway
             'company' => $response['company'],
         ];
     }
+
+    private function api($method = 'get', $uri, $params = null, $headers = null, $postFields = null)
+    {
+        // client
+        $client = new Client('https://api.github.com/');
+
+        //token
+        $token = $this->token;
+
+        // params
+        $params['access_token'] = $token->accessToken;
+
+
+        // request
+
+        $query = '';
+
+        if($params)
+        {
+            $query = http_build_query($params);
+
+            if($query)
+            {
+                $query = '?'.$query;
+            }
+        }
+
+        $url = $uri.$query;
+
+        $response = $client->get($url, $headers, $postFields)->send();
+
+        $response = $response->json();
+
+        return $response;
+    }
 }
