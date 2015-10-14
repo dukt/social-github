@@ -8,7 +8,7 @@ Adds GitHub gateway to Craft Social Login.
 
 - **[Craft CMS](https://http://buildwithcraft.com/)** 2.4+
 - **[OAuth](https://dukt.net/craft/oauth)** for Craft CMS
-- **[Social Login](https://dukt.net/craft/social)** for Craft CMS
+- **[Social Login](https://dukt.net/craft/social)** 0.10+ for Craft CMS
 
 ## Installation
 
