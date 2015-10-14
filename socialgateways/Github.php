@@ -21,11 +21,6 @@ class Github extends BaseGateway
         return UrlHelper::getResourceUrl('github/svg/github.svg');
     }
 
-    public function getColor()
-    {
-        return '#444';
-    }
-
     public function getScopes()
     {
         return array(
