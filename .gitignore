@@ -1,4 +1,2 @@
 *.log
 .DS_Store
-composer.lock
-node_modules/

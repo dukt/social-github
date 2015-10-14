@@ -7,7 +7,7 @@ namespace Craft;
  * @license   https://dukt.net/craft/github/docs/license
  */
 
-require_once(CRAFT_PLUGINS_PATH.'github/vendor/autoload.php');
+require_once(CRAFT_PLUGINS_PATH.'github/socialgateways/Github.php');
 
 class GithubPlugin extends BasePlugin
 {

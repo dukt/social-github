@@ -37,9 +37,9 @@ class Github extends BaseGateway
 	 */
     public function getScopes()
     {
-        return array(
-            'user',
-        );
+        return [
+            'user'
+        ];
     }
 
 	/**
@@ -49,7 +49,7 @@ class Github extends BaseGateway
     {
         $response = $this->api('get', 'user');
 
-        return array(
+        return [
             'id' => $response['id'],
             'email' => $response['email'],
             'username' => $response['login'],
@@ -58,6 +58,6 @@ class Github extends BaseGateway
             'profileUrl' => $response['html_url'],
             'location' => $response['location'],
             'company' => $response['company'],
-        );
+        ];
     }
 }
