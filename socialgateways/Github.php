@@ -1,26 +1,40 @@
 <?php
-
 namespace Dukt\Github\Social\Gateway;
 
+/**
+ * @link      https://dukt.net/craft/github/
+ * @copyright Copyright (c) 2015, Dukt
+ * @license   https://dukt.net/craft/github/docs/license
+ */
+
+use Craft\UrlHelper;
 use Dukt\Social\Gateway\BaseGateway;
 use Guzzle\Http\Client;
-use Craft\UrlHelper;
 
 class Github extends BaseGateway
 {
     // Public Methods
     // =========================================================================
 
-    public function getName()
+	/**
+	 * Get Name
+	 */
+	public function getName()
     {
         return "GitHub";
     }
 
+	/**
+	 * Get Icon URL
+	 */
     public function getIconUrl()
     {
         return UrlHelper::getResourceUrl('github/svg/github.svg');
     }
 
+	/**
+	 * Get Scopes
+	 */
     public function getScopes()
     {
         return array(
@@ -28,6 +42,9 @@ class Github extends BaseGateway
         );
     }
 
+	/**
+	 * Get Profile
+	 */
     public function getProfile()
     {
         $response = $this->api('get', 'user');
@@ -42,41 +59,5 @@ class Github extends BaseGateway
             'location' => $response['location'],
             'company' => $response['company'],
         );
-
-    }
-
-    public function api($method = 'get', $uri, $params = null, $headers = null, $postFields = null)
-    {
-        // client
-        $client = new Client('https://api.github.com/');
-
-        //token
-        $token = $this->token;
-
-        // params
-        $params['access_token'] = $token->accessToken;
-
-
-        // request
-
-        $query = '';
-
-        if($params)
-        {
-            $query = http_build_query($params);
-
-            if($query)
-            {
-                $query = '?'.$query;
-            }
-        }
-
-        $url = $uri.$query;
-
-        $response = $client->get($url, $headers, $postFields)->send();
-
-        $response = $response->json();
-
-        return $response;
     }
 }

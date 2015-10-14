@@ -1,16 +1,13 @@
 # GitHub for Craft CMS
-A simple plugin to connect to GitHub's API.
+
+Adds GitHub gateway to Craft Social Login.
 
 -------------------------------------------
-
-## Beta Warning
-
-This beta software is not ready for production.
 
 ## Requirements
 
 - **OAuth**
-- **Social Login** (optional) — Enable social login with GitHub.
+- **Social Login**
 
 ## Installation
 

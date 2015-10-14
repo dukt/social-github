@@ -1,6 +1,11 @@
 <?php
-
 namespace Craft;
+
+/**
+ * @link      https://dukt.net/craft/github/
+ * @copyright Copyright (c) 2015, Dukt
+ * @license   https://dukt.net/craft/github/docs/license
+ */
 
 require_once(CRAFT_PLUGINS_PATH.'github/vendor/autoload.php');
 
@@ -45,6 +50,6 @@ class GithubPlugin extends BasePlugin
      */
     function getDeveloperUrl()
     {
-        return 'http://dukt.net/';
+        return 'https://dukt.net/';
     }
 }
