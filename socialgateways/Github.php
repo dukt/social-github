@@ -38,7 +38,7 @@ class Github extends BaseGateway
     public function getScopes()
     {
         return array(
-            'user, repo',
+            'user',
         );
     }
 
