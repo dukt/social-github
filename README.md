@@ -1,21 +1,18 @@
-# GitHub for Craft CMS
+# Craft GitHub
 
-Adds GitHub gateway to Craft Social Login.
+Add OAuth GitHub provider to Craft OAuth
 
 -------------------------------------------
 
 ## Requirements
 
-- **[Craft CMS](http://buildwithcraft.com/)** 2.4+
-- **[OAuth](https://dukt.net/craft/oauth)** for Craft CMS
-- **[Social Login](https://dukt.net/craft/social)** 0.10+ for Craft CMS
+- [Craft 2.5+](http://buildwithcraft.com/)
+- [Craft OAuth 1.0+](https://dukt.net/craft/oauth)
 
 ## Installation
 
 1. Download the latest release of the plugin
 2. Drop the `github` plugin folder to `craft/plugins`
-3. Install GitHub from Craft's control panel in `Settings > Plugins`
-
-Once installed and enabled, GitHub will appear in the list of gateways in `CP > Settings > Social Login > Gateways`.
+3. GitHub should appear in OAuth settings under `CP > Settings > Plugins > OAuth > Providers`
 
 [Dukt.net](https://dukt.net/) © 2015 - All rights reserved
