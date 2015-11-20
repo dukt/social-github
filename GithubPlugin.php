@@ -7,19 +7,22 @@ namespace Craft;
  * @license   https://dukt.net/craft/github/docs/license
  */
 
-require_once(CRAFT_PLUGINS_PATH.'github/socialgateways/Github.php');
+
 
 class GithubPlugin extends BasePlugin
 {
     /**
-     * Get Social Gateways
+     * Get OAuth Providers
      */
-    public function getSocialGateways()
+    public function getOAuthProviders()
     {
+        require_once(CRAFT_PLUGINS_PATH.'github/providers/oauth/Github.php');
+
         return [
-            'Dukt\Github\Social\Gateway\Github'
+            'Dukt\OAuth\Providers\Github'
         ];
     }
+
 
     /**
      * Get Name
