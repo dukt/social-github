@@ -23,6 +23,17 @@ class GithubPlugin extends BasePlugin
         ];
     }
 
+    /**
+     * Get OAuth Providers
+     */
+    public function getSocialLoginProviders()
+    {
+        require_once(CRAFT_PLUGINS_PATH.'github/providers/social/Github.php');
+
+        return [
+            'Dukt\Social\LoginProviders\Github',
+        ];
+    }
 
     /**
      * Get Name
