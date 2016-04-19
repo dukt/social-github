@@ -8,6 +8,7 @@ namespace Craft;
  */
 
 
+require_once(CRAFT_PLUGINS_PATH.'github/vendor/autoload.php');
 
 class GithubPlugin extends BasePlugin
 {
