@@ -16,6 +16,7 @@ class GithubPlugin extends BasePlugin
      */
     public function getOAuthProviders()
     {
+        require_once(CRAFT_PLUGINS_PATH.'oauth/providers/BaseProvider.php');
         require_once(CRAFT_PLUGINS_PATH.'github/providers/oauth/Github.php');
 
         return [
