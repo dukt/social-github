@@ -20,4 +20,25 @@ class Github extends BaseProvider
     {
         return 'github';
     }
+
+	public function getProfile($token)
+	{
+		$remoteProfile = $this->getRemoteProfile($token);
+		$remoteProfileArray = $remoteProfile->toArray();
+
+		$photoUrl = null;
+
+		if(isset($remoteProfileArray['avatar_url']))
+		{
+			$photoUrl = $remoteProfileArray['avatar_url'];
+		}
+
+		return [
+			'id' => $remoteProfile->getId(),
+			'email' => $remoteProfile->getEmail(),
+			'photoUrl' => $photoUrl,
+
+			'name' => $remoteProfile->getName(),
+		];
+	}
 }
