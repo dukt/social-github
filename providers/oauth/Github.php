@@ -51,7 +51,7 @@ class Github extends BaseProvider
      */
     public function getManagerUrl()
     {
-        return 'https://github.com/settings/applications/';
+        return 'https://github.com/settings/developers';
     }
 
     /**
