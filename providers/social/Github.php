@@ -8,6 +8,7 @@
 namespace Dukt\Social\LoginProviders;
 
 use Craft\Craft;
+use Craft\Oauth_TokenModel;
 
 class Github extends BaseProvider
 {
@@ -21,7 +22,7 @@ class Github extends BaseProvider
         return 'github';
     }
 
-	public function getProfile($token)
+    public function getProfile(Oauth_TokenModel $token)
 	{
 		$remoteProfile = $this->getRemoteProfile($token);
 		$remoteProfileArray = $remoteProfile->toArray();
