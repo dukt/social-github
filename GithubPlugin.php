@@ -7,11 +7,18 @@ namespace Craft;
  * @license   https://dukt.net/craft/github/docs/license
  */
 
-
-require_once(CRAFT_PLUGINS_PATH.'github/vendor/autoload.php');
-
 class GithubPlugin extends BasePlugin
 {
+    /**
+     * Initializes the application component.
+     *
+     * @return null
+     */
+    public function init()
+    {
+        require_once(CRAFT_PLUGINS_PATH.'instagram/vendor/autoload.php');
+    }
+
     /**
      * Get OAuth Providers
      */
