@@ -16,7 +16,7 @@ class GithubPlugin extends BasePlugin
      */
     public function init()
     {
-        require_once(CRAFT_PLUGINS_PATH.'instagram/vendor/autoload.php');
+        require_once(CRAFT_PLUGINS_PATH.'github/vendor/autoload.php');
     }
 
     /**
