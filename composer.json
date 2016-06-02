@@ -1,9 +1,5 @@
 {
     "require": {
         "league/oauth2-github": "0.2.1@dev"
-    },
-    "scripts": {
-        "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"],
-        "post-install-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"]
     }
 }
