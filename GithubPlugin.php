@@ -56,7 +56,7 @@ class GithubPlugin extends BasePlugin
      */
     function getVersion()
     {
-        return '2.0.3';
+        return '2.0.1';
     }
 
     /**
