@@ -1,16 +1,46 @@
 {
-    "name": "dukt/craft-github",
-    "description": "GitHub plugin for Craft CMS",
+    "name": "dukt/social-github",
+    "description": "GitHub integration for Social",
+    "version": "3.0.0",
+    "type": "craft-plugin",
+    "keywords": [
+        "github",
+        "social",
+        "craftcms"
+    ],
+    "license": "MIT",
     "authors": [
         {
-            "name": "Benjamin David",
-            "email": "ben@dukt.net"
+            "name": "Dukt",
+            "homepage": "https://dukt.net/"
         }
     ],
-    "type": "craft-plugin",
-
+    "support": {
+        "email": "support@dukt.net",
+        "issues": "https://github.com/dukt/social-github/issues?state=open",
+        "source": "https://github.com/dukt/social-github",
+        "docs": "https://github.com/dukt/social-github",
+        "rss": "https://github.com/dukt/social-github/commits/master.atom"
+    },
     "require": {
-        "composer/installers": "~1.0",
-        "league/oauth2-github": "0.2.1@dev"
+        "dukt/social": "^2.0",
+        "league/oauth2-github": "^2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "dukt\\social\\github\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "extra": {
+        "name": "GitHub",
+        "handle": "social-github",
+        "changelogUrl": "https://raw.githubusercontent.com/dukt/social-github/master/CHANGELOG.md",
+        "downloadUrl": "https://github.com/dukt/social-github/archive/master.zip"
     }
 }

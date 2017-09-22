@@ -1,18 +1,28 @@
-# Craft GitHub
+GitHub login provider for Social
+=======================
 
-Add OAuth GitHub provider to Craft OAuth
+This plugin provides a [GitHub](https://github.com/) integration for [Social 2 for Craft CMS](https://github.com/dukt/social).
 
--------------------------------------------
 
 ## Requirements
 
-- [Craft 2.5+](http://buildwithcraft.com/)
-- [Craft OAuth 2.0+](https://dukt.net/craft/oauth)
+This plugin requires Social 2.0.0-beta.1 or later.
+
 
 ## Installation
 
-1. Download the latest release of the plugin
-2. Drop the `github` plugin folder to `craft/plugins`
-3. GitHub should appear in OAuth settings under `CP > Settings > Plugins > OAuth > Providers`
+To install the plugin, follow these instructions.
 
-[Dukt.net](https://dukt.net/) © 2015 - All rights reserved
+1. Open your terminal and go to your Craft project:
+
+        cd /path/to/project
+
+2. Then tell Composer to load the plugin:
+
+        composer require dukt/social-github
+
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for GitHub.
+
+## Setup
+
+To enable the GitHub login provider, go to Social → Settings → Login Providers, and configure the “GitHub” login provider.
