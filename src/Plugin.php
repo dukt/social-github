@@ -1,6 +1,9 @@
 <?php
 namespace dukt\social\github;
 
+use dukt\social\services\LoginProviders;
+use yii\base\Event;
+
 /**
  * Plugin represents the GitHub integration plugin.
  *
@@ -10,14 +13,18 @@ namespace dukt\social\github;
 class Plugin extends \craft\base\Plugin
 {
     /**
-     * Returns Social login provider class names.
-     *
-     * @return array
+     * @inheritdoc
      */
-    public function getSocialLoginProviders()
+    public function init()
     {
-        return [
-            'dukt\social\github\loginproviders\Github'
-        ];
+        parent::init();
+
+        Event::on(LoginProviders::class, LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES, function($event) {
+            $loginProviderTypes = [
+                'dukt\social\github\loginproviders\Github'
+            ];
+
+            $event->loginProviderTypes = array_merge($event->loginProviderTypes, $loginProviderTypes);
+        });
     }
 }
