@@ -65,4 +65,12 @@ class SocialGithubPlugin extends BasePlugin
     {
         return 'https://dukt.net/';
     }
+
+    /**
+     * Get release feed URL
+     */
+    public function getReleaseFeedUrl()
+    {
+        return 'https://raw.githubusercontent.com/dukt/social-github/v2/releases.json';
+    }
 }
