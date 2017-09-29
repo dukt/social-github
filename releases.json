@@ -31,21 +31,5 @@
     "notes": [
       "[Added] Compatibility with OAuth 2.0+"
     ]
-  },
-  {
-    "version": "1.0.1",
-    "downloadUrl": "https://github.com/dukt/social-github/archive/1.0.1.zip",
-    "date": "2015-12-03T11:00:00-02:00",
-    "notes": [
-      "[Added] Added GitHub social login provider"
-    ]
-  },
-  {
-    "version": "1.0.0",
-    "downloadUrl": "https://github.com/dukt/social-github/archive/1.0.0.zip",
-    "date": "2015-12-02T11:00:00-02:00",
-    "notes": [
-      "[Added] Initial release."
-    ]
   }
 ]
