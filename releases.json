@@ -1,0 +1,41 @@
+[
+  {
+    "version": "2.0.1",
+    "downloadUrl": "https://github.com/dukt/social-github/archive/2.0.1.zip",
+    "date": "2016-06-04T11:00:00-02:00",
+    "notes": [
+      "[Added] Added GitHub social login provider",
+      "[Added] Added composer/installers and package details",
+      "[Added] Added Github::getProfile() method",
+      "[Added] Added support for private email addresses",
+      "[Improved] Moved dependencies loading to the plugin's init method",
+      "[Improved] Removed post install/update commands from composer.json",
+      "[Improved] Updated GitHub API Manager URL",
+      "[Improved] Updated GitHub login provider to meet ISocial_Provider interface requirements"
+    ]
+  },
+  {
+    "version": "2.0.0",
+    "downloadUrl": "https://github.com/dukt/social-github/archive/2.0.0.zip",
+    "date": "2016-06-03T11:00:00-02:00",
+    "notes": [
+      "[Added] Compatibility with OAuth 2.0+"
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "downloadUrl": "https://github.com/dukt/social-github/archive/1.0.1.zip",
+    "date": "2015-12-03T11:00:00-02:00",
+    "notes": [
+      "[Added] Added GitHub social login provider"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/dukt/social-github/archive/1.0.0.zip",
+    "date": "2015-12-02T11:00:00-02:00",
+    "notes": [
+      "[Added] Initial release."
+    ]
+  }
+]

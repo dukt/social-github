@@ -10,7 +10,6 @@
     "type": "craft-plugin",
 
     "require": {
-        "composer/installers": "~1.0",
-        "league/oauth2-github": "0.2.1@dev"
+        "composer/installers": "~1.0"
     }
 }

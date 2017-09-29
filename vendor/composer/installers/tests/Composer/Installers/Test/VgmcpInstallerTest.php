@@ -1,20 +1,20 @@
 <?php
 namespace Composer\Installers\Test;
 
-use Composer\Installers\AsgardInstaller;
+use Composer\Installers\VgmcpInstaller;
 use Composer\Package\Package;
 use Composer\Composer;
 
-class AsgardInstallerTest extends \PHPUnit_Framework_TestCase
+class VgmcpInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var AsgardInstaller
+     * @var VgmcpInstaller
      */
     private $installer;
 
     public function setUp()
     {
-        $this->installer = new AsgardInstaller(
+        $this->installer = new VgmcpInstaller(
             new Package('NyanCat', '4.2', '4.2'),
             new Composer()
         );
@@ -34,43 +34,43 @@ class AsgardInstallerTest extends \PHPUnit_Framework_TestCase
     public function packageNameInflectionProvider()
     {
         return array(
-            // Should keep module name StudlyCase
+            // Should keep bundle name StudlyCase
             array(
-                'asgard-module',
+                'vgmcp-bundle',
                 'user-profile',
                 'UserProfile'
             ),
             array(
-                'asgard-module',
-                'asgard-module',
-                'Asgard'
+                'vgmcp-bundle',
+                'vgmcp-bundle',
+                'Vgmcp'
             ),
             array(
-                'asgard-module',
+                'vgmcp-bundle',
                 'blog',
                 'Blog'
             ),
-            // tests that exactly one '-module' is cut off
+            // tests that exactly one '-bundle' is cut off
             array(
-                'asgard-module',
-                'some-module-module',
-                'SomeModule',
+                'vgmcp-bundle',
+                'some-bundle-bundle',
+                'SomeBundle',
             ),
             // tests that exactly one '-theme' is cut off
             array(
-                'asgard-theme',
+                'vgmcp-theme',
                 'some-theme-theme',
                 'SomeTheme',
             ),
             // tests that names without '-theme' suffix stay valid
             array(
-                'asgard-theme',
+                'vgmcp-theme',
                 'someothertheme',
                 'Someothertheme',
             ),
             // Should keep theme name StudlyCase
             array(
-                'asgard-theme',
+                'vgmcp-theme',
                 'adminlte-advanced',
                 'AdminlteAdvanced'
             ),

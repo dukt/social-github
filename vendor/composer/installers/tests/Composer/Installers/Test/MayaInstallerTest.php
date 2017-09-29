@@ -1,20 +1,20 @@
 <?php
 namespace Composer\Installers\Test;
 
-use Composer\Installers\AsgardInstaller;
+use Composer\Installers\MayaInstaller;
 use Composer\Package\Package;
 use Composer\Composer;
 
-class AsgardInstallerTest extends \PHPUnit_Framework_TestCase
+class MayaInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var AsgardInstaller
+     * @var MayaInstaller
      */
     private $installer;
 
     public function setUp()
     {
-        $this->installer = new AsgardInstaller(
+        $this->installer = new MayaInstaller(
             new Package('NyanCat', '4.2', '4.2'),
             new Composer()
         );
@@ -36,43 +36,25 @@ class AsgardInstallerTest extends \PHPUnit_Framework_TestCase
         return array(
             // Should keep module name StudlyCase
             array(
-                'asgard-module',
+                'maya-module',
                 'user-profile',
                 'UserProfile'
             ),
             array(
-                'asgard-module',
-                'asgard-module',
-                'Asgard'
+                'maya-module',
+                'maya-module',
+                'Maya'
             ),
             array(
-                'asgard-module',
+                'maya-module',
                 'blog',
                 'Blog'
             ),
             // tests that exactly one '-module' is cut off
             array(
-                'asgard-module',
+                'maya-module',
                 'some-module-module',
                 'SomeModule',
-            ),
-            // tests that exactly one '-theme' is cut off
-            array(
-                'asgard-theme',
-                'some-theme-theme',
-                'SomeTheme',
-            ),
-            // tests that names without '-theme' suffix stay valid
-            array(
-                'asgard-theme',
-                'someothertheme',
-                'Someothertheme',
-            ),
-            // Should keep theme name StudlyCase
-            array(
-                'asgard-theme',
-                'adminlte-advanced',
-                'AdminlteAdvanced'
             ),
         );
     }
