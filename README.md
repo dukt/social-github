@@ -1,6 +1,6 @@
 # Social GitHub for Craft CMS
 
-GitHub integration for Social.
+[GitHub](https://github.com/) integration for [Social](https://github.com/dukt/social).
 
 -------------------------------------------
 
@@ -8,7 +8,7 @@ GitHub integration for Social.
 
 - [Craft 2.5+](http://craftcms.com/)
 - [OAuth 2.1+](https://github.com/dukt/oauth)
-- [Social 1.2+](https://github.com/dukt/oauth)
+- [Social 1.2+](https://github.com/dukt/social)
 
 ## Installation
 
