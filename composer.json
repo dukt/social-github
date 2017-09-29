@@ -2,10 +2,11 @@
     "name": "dukt/social-github",
     "description": "GitHub integration for Social",
     "type": "craft-plugin",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dukt",
-            "email": "support@dukt.net"
+            "homepage": "https://dukt.net/"
         }
     ],
     "config": {
