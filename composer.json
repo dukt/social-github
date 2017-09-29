@@ -1,15 +1,14 @@
 {
-    "name": "dukt/craft-github",
-    "description": "GitHub plugin for Craft CMS",
+    "name": "dukt/social-github",
+    "description": "GitHub integration for Social",
+    "type": "craft-plugin",
     "authors": [
         {
-            "name": "Benjamin David",
-            "email": "ben@dukt.net"
+            "name": "Dukt",
+            "email": "support@dukt.net"
         }
     ],
-    "type": "craft-plugin",
-
-    "require": {
-        "composer/installers": "~1.0"
+    "config": {
+        "vendor-dir": "socialgithub/vendor"
     }
 }

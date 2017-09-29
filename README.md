@@ -13,7 +13,6 @@ GitHub integration for Social.
 ## Installation
 
 1. Download and unzip the latest release of the plugin.
-2. Renamed `social-github` folder to `socialgithub`.
 2. Move the `socialgithub` plugin folder to `craft/plugins`.
 3. Go to CP → Settings → Plugins, and install the Social GitHub plugin.
 3. Social GitHub should appear in OAuth settings under CP → Settings → Social → Providers.
@@ -22,5 +21,5 @@ GitHub integration for Social.
 
 The plugin has been renamed from `GitHub` to `Social GitHub`, so you will need to:
 
-1. Uninstall the `GitHub` plugin.
-2. Install the `Social GitHub` plugin.
+1. First, uninstall the `GitHub` plugin.
+2. Then install the `Social GitHub` plugin.
