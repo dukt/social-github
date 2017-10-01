@@ -38,7 +38,7 @@
         }
     ],
     "extra": {
-        "name": "GitHub",
+        "name": "Social GitHub",
         "handle": "social-github",
         "changelogUrl": "https://raw.githubusercontent.com/dukt/social-github/master/CHANGELOG.md",
         "downloadUrl": "https://github.com/dukt/social-github/archive/master.zip"
