@@ -79,23 +79,15 @@ class Github extends LoginProvider
 		];
 	}
 
-    // Protected Methods
-    // =========================================================================
-
     /**
      * Returns the login provider’s OAuth provider.
      *
      * @return \League\OAuth2\Client\Provider\Github
+     * @throws \yii\base\InvalidConfigException
      */
-    protected function getOauthProvider()
+    public function getOauthProvider(): \League\OAuth2\Client\Provider\Github
     {
-        $providerInfos = $this->getInfos();
-
-        $config = [
-            'clientId' => (isset($providerInfos['clientId']) ? $providerInfos['clientId'] : ''),
-            'clientSecret' => (isset($providerInfos['clientSecret']) ? $providerInfos['clientSecret'] : ''),
-            'redirectUri' => $this->getRedirectUri(),
-        ];
+        $config = $this->getOauthProviderConfig();
 
         return new \League\OAuth2\Client\Provider\Github($config);
     }
