@@ -33,16 +33,6 @@ class Github extends LoginProvider
     }
 
     /**
-     * @inheritDoc
-     */
-    public function getDefaultOauthScope(): array
-    {
-        return [
-            'user:email'
-        ];
-    }
-
-    /**
      * @inheritdoc
      */
     public function getManagerUrl()
@@ -66,6 +56,16 @@ class Github extends LoginProvider
         $config = $this->getOauthProviderConfig();
 
         return new \League\OAuth2\Client\Provider\Github($config['options']);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDefaultOauthScope(): array
+    {
+        return [
+            'user:email'
+        ];
     }
 
     /**
