@@ -88,25 +88,6 @@ class Github extends LoginProvider
     // Private Methods
     // =========================================================================
 
-    private function getRemoteEmail(Token $token)
-    {
-        $client = $this->getClient($token);
-
-        $response = $client->request('GET', 'user/emails');
-        $data = json_decode($response->getBody(), true);
-
-        if (is_array($data))
-        {
-            foreach ($data as $email)
-            {
-                if (isset($email['primary']) && $email['primary'])
-                {
-                    return $email['email'];
-                }
-            }
-        }
-    }
-
     /**
      * Returns the authenticated Guzzle client.
      *
