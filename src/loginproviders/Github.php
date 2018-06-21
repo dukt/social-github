@@ -59,10 +59,7 @@ class Github extends LoginProvider
     }
 
     /**
-     * Returns the login provider’s OAuth provider.
-     *
-     * @return \League\OAuth2\Client\Provider\Github
-     * @throws \yii\base\InvalidConfigException
+     * @inheritDoc
      */
     public function getOauthProvider(): \League\OAuth2\Client\Provider\Github
     {
