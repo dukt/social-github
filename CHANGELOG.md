@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+## Added
+- Added `dukt\social\github\loginproviders\Github::getDefaultUserFieldMapping()`.
+
 ### Changed
 - Changed `dukt\social\github\loginproviders\Github::getOauthProvider()` method’s visibility to `public`.
 - Removed `dukt\social\github\loginproviders\Github::getProfile()`.

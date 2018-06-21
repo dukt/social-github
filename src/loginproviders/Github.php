@@ -72,6 +72,19 @@ class Github extends LoginProvider
         return new \League\OAuth2\Client\Provider\Github($config);
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function getDefaultUserFieldMapping(): array
+    {
+        return [
+            'id' => '{{ profile.getId() }}',
+            'email' => '{{ profile.getEmail() }}',
+            'username' => '{{ profile.getEmail() }}',
+            'photo' => '{{ profile.toArray().avatar_url }}',
+        ];
+    }
+
     // Private Methods
     // =========================================================================
 
