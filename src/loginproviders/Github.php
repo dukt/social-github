@@ -95,7 +95,7 @@ class Github extends LoginProvider
      *
      * @return Client
      */
-    private function getClient(Token $token)
+    private function getClient(Token $token): Client
     {
         $headers = [];
 
