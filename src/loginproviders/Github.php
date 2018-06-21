@@ -36,7 +36,7 @@ class Github extends LoginProvider
     /**
      * @inheritDoc
      */
-    public function getDefaultScope()
+    public function getDefaultOauthScope(): array
     {
         return [
             'user:email'
