@@ -84,30 +84,4 @@ class Github extends LoginProvider
             'photo' => '{{ profile.toArray().avatar_url }}',
         ];
     }
-
-    // Private Methods
-    // =========================================================================
-
-    /**
-     * Returns the authenticated Guzzle client.
-     *
-     * @param Token $token
-     *
-     * @return Client
-     */
-    private function getClient(Token $token): Client
-    {
-        $headers = [];
-
-        if ($token) {
-            $headers['Authorization'] = 'Bearer '.$token->token;
-        }
-
-        $options = [
-            'base_uri' => 'https://api.github.com/',
-            'headers' => $headers
-        ];
-
-        return new Client($options);
-    }
 }
