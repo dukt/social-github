@@ -60,26 +60,6 @@ class Github extends LoginProvider
     }
 
     /**
-     * @inheritdoc
-     */
-    public function getProfile(Token $token)
-	{
-		$remoteProfile = $this->getRemoteProfile($token);
-		$remoteProfileArray = $remoteProfile->toArray();
-
-        $email = (isset($remoteProfileArray['email']) ? $remoteProfileArray['email'] : $this->getRemoteEmail($token));
-        $photoUrl = (isset($remoteProfileArray['avatar_url']) ? $remoteProfileArray['avatar_url'] : null);
-
-		return [
-			'id' => $remoteProfile->getId(),
-			'email' => $email,
-			'photoUrl' => $photoUrl,
-
-			'name' => $remoteProfile->getName(),
-		];
-	}
-
-    /**
      * Returns the login provider’s OAuth provider.
      *
      * @return \League\OAuth2\Client\Provider\Github
