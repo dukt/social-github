@@ -69,7 +69,7 @@ class Github extends LoginProvider
     {
         $config = $this->getOauthProviderConfig();
 
-        return new \League\OAuth2\Client\Provider\Github($config);
+        return new \League\OAuth2\Client\Provider\Github($config['options']);
     }
 
     /**

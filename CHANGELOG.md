@@ -10,6 +10,7 @@ Changelog
 - Changed `dukt\social\github\loginproviders\Github::getOauthProvider()` method’s visibility to `public`.
 - Removed `dukt\social\github\loginproviders\Github::getProfile()`.
 - Renamed `dukt\social\github\loginproviders\Github::getDefaultScope()` to `dukt\social\github\loginproviders\Github::getDefaultOauthScope()`.
+- Updated `dukt\social\github\loginproviders\Github::getOauthProvider()` to take into account the new OAuth provider config introduced in Social 2.0.0-beta.10.
 
 ## 3.0.2 - 2018-05-18
 
