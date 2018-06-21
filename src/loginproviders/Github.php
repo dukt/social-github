@@ -4,8 +4,6 @@ namespace dukt\social\github\loginproviders;
 
 use Craft;
 use dukt\social\base\LoginProvider;
-use GuzzleHttp\Client;
-use dukt\social\models\Token;
 
 /**
  * Github represents the Github gateway
