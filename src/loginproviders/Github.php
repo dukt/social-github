@@ -1,4 +1,5 @@
 <?php
+
 namespace dukt\social\github\loginproviders;
 
 use Craft;
