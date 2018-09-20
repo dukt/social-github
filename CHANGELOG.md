@@ -1,9 +1,9 @@
 Changelog
 =========
 
-## Unreleased
+## 3.0.3 - 2018-09-20
 
-## Added
+### Added
 - Added `dukt\social\github\loginproviders\Github::getDefaultUserFieldMapping()`.
 
 ### Changed
