@@ -21,7 +21,7 @@ class Plugin extends \craft\base\Plugin
 
         Event::on(LoginProviders::class, LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES, function($event) {
             $loginProviderTypes = [
-                'dukt\social\github\loginproviders\Github'
+                \dukt\social\github\loginproviders\Github::class
             ];
 
             $event->loginProviderTypes = array_merge($event->loginProviderTypes, $loginProviderTypes);
