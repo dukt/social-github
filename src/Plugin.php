@@ -19,7 +19,7 @@ class Plugin extends \craft\base\Plugin
     {
         parent::init();
 
-        Event::on(LoginProviders::class, LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES, function($event) {
+        Event::on(LoginProviders::class, LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES, function($event): void {
             $loginProviderTypes = [
                 \dukt\social\github\loginproviders\Github::class
             ];
